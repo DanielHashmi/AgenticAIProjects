@@ -1,4 +1,21 @@
-from agents import Agent, Runner, TResponseInputItem, handoff
+from agents import Agent, Runner, TResponseInputItem, handoff, RunContextWrapper, set_tracing_disabled, AsyncOpenAI, OpenAIChatCompletionsModel
+import os
+import dotenv
+
+dotenv.load_dotenv()
+set_tracing_disabled(disabled=True)
+
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
+
+if not GEMINI_API_KEY:
+    raise ValueError("API key not found!!")
+
+client = AsyncOpenAI(
+    api_key=GEMINI_API_KEY,
+    base_url='https://generativelanguage.googleapis.com/v1beta/openai/'
+)
+
+model = OpenAIChatCompletionsModel('gemini-2.0-flash', client)
 
 def agent_invoked(ctx: RunContextWrapper):
     print('Handing off to other agent...')
