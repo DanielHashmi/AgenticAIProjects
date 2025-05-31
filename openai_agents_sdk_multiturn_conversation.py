@@ -40,7 +40,6 @@ alice = Agent(
 )
 
 conversation: list[TResponseInputItem] = []
-last_agent = alice
 
 while True:
     user = input('You: ')
@@ -56,5 +55,4 @@ while True:
     result = await Runner.run(alice, conversation)
     print(f'{result.last_agent.name}: {result.final_output}')
     
-    last_agent = result.last_agent
     conversation = result.to_input_list()
