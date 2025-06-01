@@ -77,6 +77,8 @@ while True:
         print("Thanks for shopping!")
         break
     
+    print(f"Customer: {customer}")
+    
     chat_history.append({'role': 'user', 'content': customer})
     
     result = await Runner.run(shopping_agent, chat_history, context=user_profile)
@@ -84,5 +86,3 @@ while True:
     print(f"{result.last_agent.name}: {result.final_output}")
     
     chat_history = result.to_input_list()
-    
-    
