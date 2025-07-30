@@ -1,0 +1,10 @@
+2025-07-30 17:49:54,388 - __main__ - INFO - AI Assistant initialized
+2025-07-30 17:49:54,388 - __main__ - WARNING - pynput not available, falling back to system-specific hotkey detection
+2025-07-30 17:49:54,388 - __main__ - INFO - Linux hotkey monitoring started
+2025-07-30 17:51:44,419 - __main__ - INFO - AI Assistant initialized
+2025-07-30 17:51:44,419 - __main__ - INFO - Starting to process text: This is a test message for the...
+2025-07-30 17:51:44,419 - __main__ - INFO - Response shown: ✅ Text processed successfully!
+📝 Content: 'This is...
+2025-07-30 17:51:46,419 - __main__ - INFO - AI Assistant initialized
+2025-07-30 17:51:46,427 - __main__ - INFO - ✅ Hotkey listener started successfully!
+2025-07-30 18:06:44,351 - __main__ - INFO - Hotkey listener stopped
